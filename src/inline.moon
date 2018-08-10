@@ -7,7 +7,7 @@ class Inline
   -- Registers a classname and returns it
   css: (str) =>
     name = @getUniqueClassName str
-    @@styles = @@styles .. "\n.#{name} {#{str}}"
+    @@styles = @@styles .. " .#{name} {#{str}}"
     name
 
   -- Outputs a rendered style object

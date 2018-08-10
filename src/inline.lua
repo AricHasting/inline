@@ -6,7 +6,7 @@ do
   local _base_0 = {
     css = function(self, str)
       local name = self:getUniqueClassName(str)
-      self.__class.styles = self.__class.styles .. "\n." .. tostring(name) .. " {" .. tostring(str) .. "}"
+      self.__class.styles = self.__class.styles .. " ." .. tostring(name) .. " {" .. tostring(str) .. "}"
       return name
     end,
     stylesheet = function(self)
