@@ -33,14 +33,19 @@ style inline\stylesheet!
 ```
 
 ### Use in Widgets
-1. Require the module
+1. Import the css function
 ```moonscript
-inline = require "inline"
+css = (require "inline")\css
 ```
 
-2. Use `inline\css(str)` to make a new class
+2. Use `css(str)` to make a new class
 ```moonscript
-myClass = inline\css "width: 100px; height: 100px; background-color: red"
+myClass = css "
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  background-color: grey;
+"
 ```
 
 3. Apply the class to DOM elements
